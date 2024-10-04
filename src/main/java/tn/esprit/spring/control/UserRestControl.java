@@ -3,6 +3,7 @@ package tn.esprit.spring.control;
 import java.util.Date;
 import java.util.List;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,7 +11,9 @@ import tn.esprit.spring.entities.User;
 import tn.esprit.spring.services.IUserService;
 
 // userRestControl
-@RestController // = @Controller + @ResponseBody 
+
+@Tag(name = "gestion user")
+@RestController // = @Controller + @ResponseBody
 @RequestMapping("/user")
 public class UserRestControl {
 
